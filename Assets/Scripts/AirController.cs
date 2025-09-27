@@ -45,13 +45,13 @@ public class AirController : MonoBehaviour
 
         body.linearVelocity = new Vector2(movement.x * speed, body.linearVelocity.y);
 
-        if (movement.x > 0.2f || movement.x < -0.2f)
+        if (movement.x > 0.1f || movement.x < -0.1f)
         {
-            //gameObject.GetComponent<Animator>().SetBool("Moving", true);
+            gameObject.GetComponent<Animator>().SetBool("Moving", true);
         }
         else
         {
-            //gameObject.GetComponent<Animator>().SetBool("Moving", false);
+            gameObject.GetComponent<Animator>().SetBool("Moving", false);
         }
         if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
@@ -59,6 +59,7 @@ public class AirController : MonoBehaviour
 
             body.linearVelocity = new Vector2(body.linearVelocity.x, jump);
             jumpAmount--;
+            
         }
         if (Input.GetKey(KeyCode.Space) && jumpAmount > 0 && isJumping == false)
         {
@@ -95,21 +96,24 @@ public class AirController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
             }
         }
-        if (Input.GetKey(KeyCode.F) && isEarthGuy)
+        if (Input.GetKey(KeyCode.F) )
         {
-            chargeCheck.SetActive(true);
-            //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
-            body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
-            isCharging = true;
-            gameObject.GetComponent<Animator>().SetBool("Skill", true);
-
+            if (isEarthGuy)
+            {
+                chargeCheck.SetActive(true);
+                //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
+                body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
+                isCharging = true;
+                gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            }
+            else
+            {
+                chargeCheck.SetActive(false);
+                isCharging = false;
+                gameObject.GetComponent<Animator>().SetBool("Skill", false);
+            }
         }
-        else
-        {
-            chargeCheck.SetActive(false);
-            isCharging = false;
-            gameObject.GetComponent<Animator>().SetBool("Skill", false);
-        }
+            
     }
 
 
