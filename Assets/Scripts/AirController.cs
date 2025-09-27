@@ -1,0 +1,102 @@
+using System.Collections;
+using UnityEngine;
+
+public class AirController : MonoBehaviour
+{ 
+        private Rigidbody2D body;
+        public float speed = 10f;
+        public float jump = 50f;
+        public float doubleJump = 100f;
+        public bool isJumping;
+        public Vector2 boxsize;
+        public float castDistinace;
+        public LayerMask groundLayer;
+        Vector2 movement;
+        public int facing = 1;
+        public int maxJumps = 2;
+        public int jumpAmount = 0;
+ 
+    private void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
+    public void Start()
+    {
+        jumpAmount = maxJumps;
+    }
+ 
+    private void FixedUpdate()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        body.linearVelocity = new Vector2(movement.x * speed, body.linearVelocity.y);
+        
+        if(movement.x>0.2f||movement.x<-0.2f){
+            //gameObject.GetComponent<Animator>().SetBool("Moving", true);
+        }
+        else{
+            //gameObject.GetComponent<Animator>().SetBool("Moving", false);
+        }
+        if (Input.GetKey(KeyCode.Space) && isGrounded())
+        {
+            StartCoroutine(JumpCooldown());
+            
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jump);    
+            jumpAmount--;
+        }
+        if (Input.GetKey(KeyCode.Space) && jumpAmount >0 && isJumping == false)
+        {
+            body.linearVelocity = new Vector2(body.linearVelocity.x, doubleJump);
+            
+            StartCoroutine(JumpCooldown());
+            jumpAmount--;
+        }
+        if(isGrounded()){
+            jumpAmount = maxJumps;
+        }
+        if(isGrounded()){
+            //gameObject.GetComponent<Animator>().SetBool("Jumping", false);
+        }
+        if(isGrounded() == false){
+            //gameObject.GetComponent<Animator>().SetBool("Jumping", true);
+        }
+        if(movement.x<0 )
+        {
+            facing = -1;
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+        }
+        else if (movement.x>0 )
+        {
+            facing = 1;
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+        }
+    }
+
+
+    public bool isGrounded(){
+        if(Physics2D.BoxCast(transform.position,boxsize,0, -transform.up,castDistinace, groundLayer ) ) {
+            return true;
+            
+            
+        }
+        else{
+            return false;
+            
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position-transform.up * castDistinace, boxsize );
+    }
+
+    private IEnumerator JumpCooldown()
+    {
+        
+        isJumping = true;
+        yield return new WaitForSeconds(0.5f);
+        isJumping = false;
+        Debug.Log("done");
+    }
+}
