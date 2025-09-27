@@ -104,9 +104,10 @@ public class AirController : MonoBehaviour
             
 
         }
-        if (Input.GetKeyUp(KeyCode.F))
+        else
         {
             chargeCheck.SetActive(false);
+            isCharging = false;
         }
     }
 
