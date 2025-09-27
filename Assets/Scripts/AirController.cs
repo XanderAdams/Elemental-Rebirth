@@ -19,8 +19,13 @@ public class AirController : MonoBehaviour
     public int jumpAmount = 0;
     public GameObject chargeCheck;
     public bool isCharging;
+    public GameObject growablePrefab;
+    private Vector3 growableSpawn;
+    public float growingAmount = 0.5f;
+    public float growingTime;
     public bool isAirGuy = false;
     public bool isEarthGuy = false;
+    public bool isPlantGuy = false;
  
     private void Awake()
     {
@@ -40,6 +45,7 @@ public class AirController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        growableSpawn = new Vector3(facing,0f,0f);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -82,7 +88,7 @@ public class AirController : MonoBehaviour
         }
         if (movement.x < 0)
         {
-            if(isCharging == false)
+            if (isCharging == false)
             {
                 facing = -1;
                 transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
@@ -90,29 +96,41 @@ public class AirController : MonoBehaviour
         }
         else if (movement.x > 0)
         {
-            if(isCharging == false)
+            if (isCharging == false)
             {
                 facing = 1;
                 transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
             }
         }
-        if (Input.GetKey(KeyCode.F) )
+        if (isEarthGuy && Input.GetKey(KeyCode.F))
         {
-            if (isEarthGuy)
-            {
-                chargeCheck.SetActive(true);
-                //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
-                body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
-                isCharging = true;
-                gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            chargeCheck.SetActive(true);
+            //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
+            body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
+            isCharging = true;
+            
             }
-            else
-            {
-                chargeCheck.SetActive(false);
-                isCharging = false;
-                gameObject.GetComponent<Animator>().SetBool("Skill", false);
-            }
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("Skill", false);
+            chargeCheck.SetActive(false);
+            isCharging = false;
+            
         }
+        if (isPlantGuy && Time.time > growingTime && Input.GetKey(KeyCode.F))
+        {
+            growingTime = Time.time + growingAmount;
+            Instantiate(growablePrefab, transform.position + growableSpawn, transform.rotation);
+            gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            growingAmount--;
+        }
+        else
+        {
+            growingAmount = 1;
+            gameObject.GetComponent<Animator>().SetBool("Skill", false);
+        }
+        
             
     }
 
