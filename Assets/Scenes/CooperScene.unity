@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jump: 5
-  doubleJump: 10
+  doubleJump: 7
   isJumping: 0
   boxsize: {x: 0.9, y: 0.05}
   castDistinace: 1
