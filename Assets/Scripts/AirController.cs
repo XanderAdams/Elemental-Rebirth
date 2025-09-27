@@ -2,20 +2,21 @@ using System.Collections;
 using UnityEngine;
 
 public class AirController : MonoBehaviour
-{ 
-        private Rigidbody2D body;
-        public float speed = 10f;
-        public float jump = 50f;
-        public float doubleJump = 100f;
-        public bool isJumping;
-        public Vector2 boxsize;
-        public float castDistinace;
-        public LayerMask groundLayer;
-        Vector2 movement;
-        public int facing = 1;
-        public int maxJumps = 2;
-        public int jumpAmount = 0;
-        public bool isAirGuy = false;
+{
+    public Character character = Character.Human;
+    private Rigidbody2D body;
+    public float speed = 10f;
+    public float jump = 50f;
+    public float doubleJump = 100f;
+    public bool isJumping;
+    public Vector2 boxsize;
+    public float castDistinace;
+    public LayerMask groundLayer;
+    Vector2 movement;
+    public int facing = 1;
+    public int maxJumps = 2;
+    public int jumpAmount = 0;
+    public bool isAirGuy = false;
  
     private void Awake()
     {
@@ -107,4 +108,12 @@ public class AirController : MonoBehaviour
         isJumping = false;
         Debug.Log("done");
     }
+}
+
+public enum Character
+{
+    Human,
+    Plant,
+    Stone,
+    Air
 }
