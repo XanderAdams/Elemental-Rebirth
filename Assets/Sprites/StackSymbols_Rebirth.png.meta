@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StackSymbols_Rebirth_0: -6638282921152506072
+      StackSymbols_Rebirth_1: 646950028053925060
+      StackSymbols_Rebirth_2: -102706938775488201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
