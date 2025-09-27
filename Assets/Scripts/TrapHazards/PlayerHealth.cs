@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
    /* private void Die() //die after characters lives are up
     {
-        // Replace this with your death logic (respawn, game over, animation, etc.)
+        // Replace this with death logic (respawn, game over, animation, etc.)
         Debug.Log("Player has died.");
         Destroy(gameObject); 
     }*/

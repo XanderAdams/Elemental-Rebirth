@@ -5,8 +5,8 @@ using TMPro;
 public class LivesUI : MonoBehaviour
 {
     [Header("UI References")]
-    public Image[] lifeIcons;          // Drag your 4 UI Images here in order
-    public TextMeshProUGUI livesText;  // Optional text, e.g. "Lives:"
+    public Image[] lifeIcons;          
+    public TextMeshProUGUI livesText; 
 
     private int currentLives;
 
@@ -14,13 +14,13 @@ public class LivesUI : MonoBehaviour
     {
         currentLives = lives;
 
-        // Update life icons
+        
         for (int i = 0; i < lifeIcons.Length; i++)
         {
             lifeIcons[i].enabled = i < currentLives;
         }
 
-        // Update TMP text
+        
         if (livesText != null)
         {
             livesText.text = "Lives: " + currentLives;
