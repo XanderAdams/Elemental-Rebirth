@@ -564,7 +564,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8235585f5c335f4cba29ee782adf31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: 0
   speed: 10
+  chargeSpeed: 80
   jump: 5
   doubleJump: 7
   isJumping: 0
@@ -576,7 +578,10 @@ MonoBehaviour:
   facing: 1
   maxJumps: 1
   jumpAmount: 0
+  chargeCheck: {fileID: 1194853136}
+  isCharging: 0
   isAirGuy: 1
+  isEarthGuy: 0
 --- !u!4 &1026349612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 623051893477569492, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
@@ -599,7 +604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1194853137
 Transform:
   m_ObjectHideFlags: 0
@@ -609,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 1194853136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.79, y: -0.04, z: -4.6527395}
+  m_LocalPosition: {x: 0.532, y: -0.04, z: -4.6527395}
   m_LocalScale: {x: 0.38, y: 1.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -775,11 +780,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 623051893477569492, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.108478725
+      value: -0.103
       objectReference: {fileID: 0}
     - target: {fileID: 623051893477569492, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.488
+      value: 0.287
       objectReference: {fileID: 0}
     - target: {fileID: 623051893477569492, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_LocalPosition.z
