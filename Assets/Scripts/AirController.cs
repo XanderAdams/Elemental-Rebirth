@@ -73,11 +73,11 @@ public class AirController : MonoBehaviour
         }
         if (isGrounded())
         {
-            //gameObject.GetComponent<Animator>().SetBool("Jumping", false);
+            gameObject.GetComponent<Animator>().SetBool("jumping", false);
         }
         if (isGrounded() == false)
         {
-            //gameObject.GetComponent<Animator>().SetBool("Jumping", true);
+            gameObject.GetComponent<Animator>().SetBool("jumping", true);
         }
         if (movement.x < 0)
         {
@@ -95,19 +95,20 @@ public class AirController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
             }
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.F) && isEarthGuy)
         {
             chargeCheck.SetActive(true);
             //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
             body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
             isCharging = true;
-            
+            gameObject.GetComponent<Animator>().SetBool("Skill", true);
 
         }
         else
         {
             chargeCheck.SetActive(false);
             isCharging = false;
+            gameObject.GetComponent<Animator>().SetBool("Skill", false);
         }
     }
 
