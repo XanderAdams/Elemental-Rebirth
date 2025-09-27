@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GroundTiles_Rebirth_0: 2368493408652910778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
