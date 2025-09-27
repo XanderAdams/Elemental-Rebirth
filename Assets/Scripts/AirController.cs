@@ -6,6 +6,7 @@ public class AirController : MonoBehaviour
     public Character character = Character.Human;
     private Rigidbody2D body;
     public float speed = 10f;
+    public float chargeSpeed = 100f;
     public float jump = 50f;
     public float doubleJump = 100f;
     public bool isJumping;
@@ -16,7 +17,10 @@ public class AirController : MonoBehaviour
     public int facing = 1;
     public int maxJumps = 2;
     public int jumpAmount = 0;
+    public GameObject chargeCheck;
+    public bool isCharging;
     public bool isAirGuy = false;
+    public bool isEarthGuy = false;
  
     private void Awake()
     {
@@ -33,53 +37,83 @@ public class AirController : MonoBehaviour
         jumpAmount = maxJumps;
 
     }
- 
+
     private void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         body.linearVelocity = new Vector2(movement.x * speed, body.linearVelocity.y);
-        
-        if(movement.x>0.2f||movement.x<-0.2f){
-            //gameObject.GetComponent<Animator>().SetBool("Moving", true);
+
+        if (movement.x > 0.1f || movement.x < -0.1f)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Moving", true);
         }
-        else{
-            //gameObject.GetComponent<Animator>().SetBool("Moving", false);
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("Moving", false);
         }
         if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
             StartCoroutine(JumpCooldown());
-            
-            body.linearVelocity = new Vector2(body.linearVelocity.x, jump);    
+
+            body.linearVelocity = new Vector2(body.linearVelocity.x, jump);
             jumpAmount--;
+            
         }
-        if (Input.GetKey(KeyCode.Space) && jumpAmount >0 && isJumping == false)
+        if (Input.GetKey(KeyCode.Space) && jumpAmount > 0 && isJumping == false)
         {
             body.linearVelocity = new Vector2(body.linearVelocity.x, doubleJump);
-            
+
             StartCoroutine(JumpCooldown());
             jumpAmount--;
         }
-        if(isGrounded()){
+        if (isGrounded())
+        {
             jumpAmount = maxJumps;
         }
-        if(isGrounded()){
-            //gameObject.GetComponent<Animator>().SetBool("Jumping", false);
-        }
-        if(isGrounded() == false){
-            //gameObject.GetComponent<Animator>().SetBool("Jumping", true);
-        }
-        if(movement.x<0 )
+        if (isGrounded())
         {
-            facing = -1;
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+            gameObject.GetComponent<Animator>().SetBool("jumping", false);
         }
-        else if (movement.x>0 )
+        if (isGrounded() == false)
         {
-            facing = 1;
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+            gameObject.GetComponent<Animator>().SetBool("jumping", true);
         }
+        if (movement.x < 0)
+        {
+            if(isCharging == false)
+            {
+                facing = -1;
+                transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+            }
+        }
+        else if (movement.x > 0)
+        {
+            if(isCharging == false)
+            {
+                facing = 1;
+                transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+            }
+        }
+        if (Input.GetKey(KeyCode.F) )
+        {
+            if (isEarthGuy)
+            {
+                chargeCheck.SetActive(true);
+                //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
+                body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
+                isCharging = true;
+                gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            }
+            else
+            {
+                chargeCheck.SetActive(false);
+                isCharging = false;
+                gameObject.GetComponent<Animator>().SetBool("Skill", false);
+            }
+        }
+            
     }
 
 

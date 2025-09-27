@@ -1,1 +1,1 @@
-..\Rules\GenericRules.tmx
+..\Rules\RebirthRules.tmx
