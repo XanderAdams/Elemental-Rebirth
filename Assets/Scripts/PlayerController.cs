@@ -26,10 +26,10 @@ public class PlayerController : MonoBehaviour
         body.linearVelocity = new Vector2(movement.x * speed, body.linearVelocity.y);
         
         if(movement.x>0.2f||movement.x<-0.2f){
-            gameObject.GetComponent<Animator>().SetBool("Moving", true);
+            //gameObject.GetComponent<Animator>().SetBool("Moving", true);
         }
         else{
-            gameObject.GetComponent<Animator>().SetBool("Moving", false);
+            //gameObject.GetComponent<Animator>().SetBool("Moving", false);
         }
  
         if (Input.GetKey(KeyCode.Space) && isGrounded()){
@@ -38,20 +38,20 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(JumpCooldown());
         }
         if(isGrounded()){
-            gameObject.GetComponent<Animator>().SetBool("Jumping", false);
+            //gameObject.GetComponent<Animator>().SetBool("Jumping", false);
         }
         if(isGrounded() == false){
-            gameObject.GetComponent<Animator>().SetBool("Jumping", true);
+            //gameObject.GetComponent<Animator>().SetBool("Jumping", true);
         }
         if(movement.x<0 )
         {
             facing = -1;
-            gameObject.GetComponent<SpriteRenderer>().flipX=true;
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
         }
         else if (movement.x>0 )
         {
             facing = 1;
-             gameObject.GetComponent<SpriteRenderer>().flipX=false;
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
         }
     }
 
