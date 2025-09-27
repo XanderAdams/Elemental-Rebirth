@@ -15,6 +15,7 @@ public class AirController : MonoBehaviour
         public int facing = 1;
         public int maxJumps = 2;
         public int jumpAmount = 0;
+        public bool isAirGuy = false;
  
     private void Awake()
     {
@@ -22,7 +23,14 @@ public class AirController : MonoBehaviour
     }
     public void Start()
     {
+        if(isAirGuy == false){
+            maxJumps = 0;
+        }
+        else{
+            maxJumps = 1;
+        }
         jumpAmount = maxJumps;
+
     }
  
     private void FixedUpdate()
