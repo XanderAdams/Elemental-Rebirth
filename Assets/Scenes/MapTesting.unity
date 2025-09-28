@@ -167,10 +167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 939598483209547705, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
-      propertyPath: character
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7957890502607557238, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Name
       value: basicPlayer
@@ -910,3 +906,5 @@ SceneRoots:
   - {fileID: 2127425098}
   - {fileID: 116491458}
   - {fileID: 1135416756}
+  - {fileID: 1924178834}
+  - {fileID: 1721935662}
