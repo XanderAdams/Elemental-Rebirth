@@ -57,3 +57,7 @@ MonoBehaviour:
   m_PrefabReplacements:
   - m_TypeName: destructable
     m_Prefab: {fileID: 2726370075482595225, guid: 0cda1417d21e94b45a2ec819c4e68bed, type: 3}
+  - m_TypeName: destructableLeft
+    m_Prefab: {fileID: 2726370075482595225, guid: 1aff32354578f294380ee10c0e72b5c2, type: 3}
+  - m_TypeName: destructableRight
+    m_Prefab: {fileID: 2726370075482595225, guid: df37294506daee94aab32f02041cea12, type: 3}
