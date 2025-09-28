@@ -22,21 +22,23 @@ public class AirController : MonoBehaviour
     public GameObject growablePrefab;
     private Vector3 growableSpawn;
     public float growingAmount = 0.5f;
-    public float growingTime;
+    public float growingTime = 0.5f;
     public bool isAirGuy = false;
     public bool isEarthGuy = false;
     public bool isPlantGuy = false;
- 
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
     }
     public void Start()
     {
-        if(isAirGuy == false){
+        if (isAirGuy == false)
+        {
             maxJumps = 0;
         }
-        else{
+        else
+        {
             maxJumps = 1;
         }
         jumpAmount = maxJumps;
@@ -45,7 +47,7 @@ public class AirController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        growableSpawn = new Vector3(facing,0f,0f);
+        growableSpawn = new Vector3(facing, 0f, 0f);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -65,7 +67,7 @@ public class AirController : MonoBehaviour
 
             body.linearVelocity = new Vector2(body.linearVelocity.x, jump);
             jumpAmount--;
-            
+
         }
         if (Input.GetKey(KeyCode.Space) && jumpAmount > 0 && isJumping == false)
         {
@@ -109,58 +111,69 @@ public class AirController : MonoBehaviour
             //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
             body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
             isCharging = true;
-            
-            }
+
+        }
         else
         {
-            gameObject.GetComponent<Animator>().SetBool("Skill", false);
+            //gameObject.GetComponent<Animator>().SetBool("Skill", false);
             chargeCheck.SetActive(false);
             isCharging = false;
-            
+
         }
         if (isPlantGuy && Time.time > growingTime && Input.GetKey(KeyCode.F))
-        {
+        {gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            Debug.Log("Growplant");
             growingTime = Time.time + growingAmount;
-            Instantiate(growablePrefab, transform.position + growableSpawn, transform.rotation);
             gameObject.GetComponent<Animator>().SetBool("Skill", true);
-            growingAmount--;
+            //Growplant();
+            
+            gameObject.GetComponent<Animator>().SetBool("Skill", true);
         }
         else
         {
-            growingAmount = 1;
-            gameObject.GetComponent<Animator>().SetBool("Skill", false);
+            //gameObject.GetComponent<Animator>().SetBool("Skill", false);
         }
-        
-            
+
+
     }
 
 
-    public bool isGrounded(){
-        if(Physics2D.BoxCast(transform.position,boxsize,0, -transform.up,castDistinace, groundLayer ) ) {
+    public bool isGrounded()
+    {
+        if (Physics2D.BoxCast(transform.position, boxsize, 0, -transform.up, castDistinace, groundLayer))
+        {
             return true;
-            
-            
+
+
         }
-        else{
+        else
+        {
             return false;
-            
+
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position-transform.up * castDistinace, boxsize );
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistinace, boxsize);
     }
 
     private IEnumerator JumpCooldown()
     {
-        
+
         isJumping = true;
         yield return new WaitForSeconds(0.5f);
         isJumping = false;
         Debug.Log("done");
     }
+    public void Growplant()
+    {
+       
+        Instantiate(growablePrefab, transform.position + growableSpawn, transform.rotation);
+        gameObject.GetComponent<Animator>().SetBool("Skill", false);
+    }
 }
+
 
 public enum Character
 {
