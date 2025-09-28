@@ -63,7 +63,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 2459557042337973148}
   - component: {fileID: 2841948238311360204}
   - component: {fileID: 939598483209547705}
+  - component: {fileID: 559417962536349208}
   m_Layer: 0
   m_Name: basicPlayer
   m_TagString: Player
@@ -300,6 +301,20 @@ MonoBehaviour:
   growablePrefab: {fileID: 4197374315348356572, guid: 1312f1ac102c4cd449a806bea4ba9bca, type: 3}
   growingAmount: 1
   growingTime: 0
-  isAirGuy: 0
-  isEarthGuy: 1
-  isPlantGuy: 0
+  animator: {fileID: 0}
+  PlantAnimator: {fileID: 9100000, guid: 31eaa1a9397dbb947a191d9522bd252d, type: 2}
+  StoneAnimator: {fileID: 9100000, guid: 27a86ba870abe8f488a2917fdc0fa490, type: 2}
+  AirAnimator: {fileID: 9100000, guid: c6d4056b2d11a27448f629da41c15ab7, type: 2}
+  plats: []
+--- !u!114 &559417962536349208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957890502607557238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1780c984ba434b45a4127edb99f7287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
