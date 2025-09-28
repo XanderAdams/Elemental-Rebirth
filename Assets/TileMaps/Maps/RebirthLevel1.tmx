@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="7" nextobjectid="818">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="7" nextobjectid="1070">
  <tileset firstgid="1" source="../TileSets/GroundTiles_Rebirth.tsx"/>
  <tileset firstgid="26" source="../TileSets/RebirthThorns.tsx"/>
- <layer id="1" name="layout" width="30" height="20" visible="0">
+ <layer id="1" name="layout" width="30" height="20">
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,2,2,2,2,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,25,25,25,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,25,25,25,0,2,2,2,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,25,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,25,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,2,
-2,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,29,29,2,
+2,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,2,
+2,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,29,29,2,
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
 </data>
  </layer>
@@ -41,8 +41,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -78,54 +78,278 @@
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,2,1,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,1,1,1,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,2,2,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,1,1,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2
+2,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,1,1,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,1,1,1,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2
 </data>
  </layer>
  <objectgroup id="6" name="destructable">
-  <object id="790" type="destructableRight" gid="19" x="1152" y="896" width="64" height="64"/>
-  <object id="791" type="destructableLeft" gid="9" x="1152" y="896" width="64" height="64"/>
-  <object id="792" type="destructableRight" gid="19" x="1152" y="960" width="64" height="64"/>
-  <object id="793" type="destructableLeft" gid="9" x="1152" y="960" width="64" height="64"/>
-  <object id="794" type="destructableRight" gid="19" x="1152" y="896" width="64" height="64"/>
-  <object id="795" type="destructableLeft" gid="9" x="1152" y="896" width="64" height="64"/>
-  <object id="796" type="destructableRight" gid="19" x="1152" y="960" width="64" height="64"/>
-  <object id="797" type="destructableLeft" gid="9" x="1152" y="960" width="64" height="64"/>
-  <object id="798" type="destructableRight" gid="19" x="1088" y="896" width="64" height="64"/>
-  <object id="799" type="destructableLeft" gid="9" x="1088" y="896" width="64" height="64"/>
-  <object id="800" type="destructableRight" gid="19" x="1152" y="896" width="64" height="64"/>
-  <object id="801" type="destructableLeft" gid="9" x="1152" y="896" width="64" height="64"/>
-  <object id="802" type="destructableRight" gid="19" x="1088" y="960" width="64" height="64"/>
-  <object id="803" type="destructableLeft" gid="9" x="1088" y="960" width="64" height="64"/>
-  <object id="804" type="destructableRight" gid="19" x="1152" y="960" width="64" height="64"/>
-  <object id="805" type="destructableLeft" gid="9" x="1152" y="960" width="64" height="64"/>
-  <object id="806" type="destructableRight" gid="19" x="1152" y="896" width="64" height="64"/>
-  <object id="807" type="destructableRight" gid="19" x="1152" y="960" width="64" height="64"/>
-  <object id="808" type="destructableLeft" gid="9" x="1088" y="896" width="64" height="64"/>
-  <object id="809" type="destructableLeft" gid="9" x="1088" y="960" width="64" height="64"/>
-  <object id="810" type="destructableRight" gid="19" x="1088" y="896" width="64" height="64"/>
-  <object id="811" type="destructableLeft" gid="9" x="1088" y="896" width="64" height="64"/>
-  <object id="812" type="destructableRight" gid="19" x="1152" y="896" width="64" height="64"/>
-  <object id="813" type="destructableLeft" gid="9" x="1152" y="896" width="64" height="64"/>
-  <object id="814" type="destructableRight" gid="19" x="1088" y="960" width="64" height="64"/>
-  <object id="815" type="destructableLeft" gid="9" x="1088" y="960" width="64" height="64"/>
-  <object id="816" type="destructableRight" gid="19" x="1152" y="960" width="64" height="64"/>
-  <object id="817" type="destructableLeft" gid="9" x="1152" y="960" width="64" height="64"/>
+  <object id="818" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="819" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="820" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="821" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="822" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="823" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="824" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="825" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="826" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="827" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="828" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="829" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="830" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="831" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="832" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="833" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="834" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="835" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="836" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="837" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="838" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="839" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="840" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="841" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="842" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="843" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="844" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="845" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="846" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="847" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="848" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="849" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="850" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="851" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="852" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="853" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="854" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="855" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="856" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="857" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="858" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="859" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="860" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="861" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="862" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="863" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="864" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="865" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="866" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="867" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="868" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="869" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="870" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="871" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="872" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="873" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="874" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="875" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="876" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="877" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="878" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="879" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="880" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="881" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="882" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="883" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="884" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="885" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="886" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="887" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="888" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="889" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="890" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="891" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="892" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="893" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="894" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="895" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="896" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="897" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="898" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="899" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="900" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="901" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="902" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="903" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="904" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="905" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="906" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="907" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="908" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="909" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="910" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="911" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="912" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="913" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="914" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="915" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="916" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="917" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="918" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="919" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="920" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="921" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="922" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="923" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="924" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="925" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="926" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="927" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="928" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="929" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="930" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="931" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="932" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="933" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="934" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="935" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="936" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="937" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="938" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="939" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="940" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="941" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="942" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="943" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="944" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="945" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="946" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="947" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="948" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="949" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="950" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="951" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="952" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="953" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="954" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="955" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="956" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="957" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="958" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="959" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="960" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="961" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="962" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="963" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="964" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="965" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="966" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="967" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="968" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="969" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="970" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="971" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="972" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="973" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="974" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="975" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="976" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="977" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="978" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="979" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="980" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="981" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="982" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="983" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="984" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="985" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="986" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="987" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="988" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="989" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="990" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="991" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="992" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="993" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="994" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="995" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="996" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="997" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="998" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="999" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1000" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="1001" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="1002" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="1003" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="1004" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1005" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="1006" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="1007" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1008" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="1009" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="1010" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="1011" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="1012" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1013" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="1014" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1015" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1016" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1017" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1018" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="1019" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1020" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="1021" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="1022" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="1023" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="1024" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1025" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="1026" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="1027" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1028" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="1029" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="1030" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="1031" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="1032" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1033" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="1034" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="1035" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1036" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="1037" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="1038" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="1039" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="1040" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1041" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="1042" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="1043" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1044" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="1045" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="1046" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="1047" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="1048" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1049" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
+  <object id="1050" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1051" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1052" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1053" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1054" type="destructableRight" gid="19" x="1344" y="704" width="64" height="64"/>
+  <object id="1055" type="destructableLeft" gid="9" x="1344" y="704" width="64" height="64"/>
+  <object id="1056" type="destructableRight" gid="19" x="1408" y="704" width="64" height="64"/>
+  <object id="1057" type="destructableLeft" gid="9" x="1408" y="704" width="64" height="64"/>
+  <object id="1058" type="destructableRight" gid="19" x="1472" y="704" width="64" height="64"/>
+  <object id="1059" type="destructableLeft" gid="9" x="1472" y="704" width="64" height="64"/>
+  <object id="1060" type="destructableRight" gid="19" x="1536" y="704" width="64" height="64"/>
+  <object id="1061" type="destructableLeft" gid="9" x="1536" y="704" width="64" height="64"/>
+  <object id="1062" type="destructableRight" gid="19" x="1344" y="768" width="64" height="64"/>
+  <object id="1063" type="destructableLeft" gid="9" x="1344" y="768" width="64" height="64"/>
+  <object id="1064" type="destructableRight" gid="19" x="1408" y="768" width="64" height="64"/>
+  <object id="1065" type="destructableLeft" gid="9" x="1408" y="768" width="64" height="64"/>
+  <object id="1066" type="destructableRight" gid="19" x="1472" y="768" width="64" height="64"/>
+  <object id="1067" type="destructableLeft" gid="9" x="1472" y="768" width="64" height="64"/>
+  <object id="1068" type="destructableRight" gid="19" x="1536" y="768" width="64" height="64"/>
+  <object id="1069" type="destructableLeft" gid="9" x="1536" y="768" width="64" height="64"/>
  </objectgroup>
 </map>
