@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Life : MonoBehaviour
 {
     public Character character;
+    //use this on the next life
 
     [Header("UI Images")]
     public Image leafImage;
@@ -43,5 +44,7 @@ public class Life : MonoBehaviour
             Debug.Log("Player has died.");
             //SceneManager.LoadScene("Dead");  //the dead scene or main menu etc
         }
+
+
     }
 }
