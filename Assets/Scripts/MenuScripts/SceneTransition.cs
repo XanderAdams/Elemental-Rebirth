@@ -23,6 +23,7 @@ public class SceneTransition : MonoBehaviour
 
     public void TransitionScene(string targetScene)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(targetScene);
     }
 
