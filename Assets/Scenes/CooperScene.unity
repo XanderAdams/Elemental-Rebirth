@@ -1990,6 +1990,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 939598483209547705, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
+      propertyPath: character
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841948238311360204, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96491fa7ed2a4e14f80f825300d6530d, type: 2}
     - target: {fileID: 7957890502607557238, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Name
       value: basicPlayer
