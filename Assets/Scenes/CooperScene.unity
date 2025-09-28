@@ -583,9 +583,9 @@ MonoBehaviour:
   growablePrefab: {fileID: 1739118090505702840, guid: 8228380cc84d7404e880e7f563134ea5, type: 3}
   growingAmount: 1
   growingTime: 0
-  isAirGuy: 1
-  isEarthGuy: 0
-  isPlantGuy: 1
+  isAirGuy: 0
+  isEarthGuy: 1
+  isPlantGuy: 0
 --- !u!4 &1026349612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 623051893477569492, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
@@ -618,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 1194853136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.532, y: -0.04, z: -4.6527395}
+  m_LocalPosition: {x: 0.532, y: -0.04, z: 0}
   m_LocalScale: {x: 0.38, y: 1.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -869,12 +869,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 944125772584891860, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 944125772584891860, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+      objectReference: {fileID: -2119631465, guid: 5f367629ae5a10440a0e7e37feafeeff, type: 3}
     - target: {fileID: 1707280018405626544, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -882,7 +882,7 @@ PrefabInstance:
     - target: {fileID: 2841948238311360204, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 31eaa1a9397dbb947a191d9522bd252d, type: 2}
+      objectReference: {fileID: 9100000, guid: 27a86ba870abe8f488a2917fdc0fa490, type: 2}
     - target: {fileID: 7957890502607557238, guid: d15fd5e70c70e324e89e7063080ad800, type: 3}
       propertyPath: m_Name
       value: basicPlayer

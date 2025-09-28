@@ -104,13 +104,16 @@ public class AirController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
             }
         }
-        if (isEarthGuy && Input.GetKey(KeyCode.F))
+        if (isEarthGuy)
         {
-            gameObject.GetComponent<Animator>().SetBool("Skill", true);
-            chargeCheck.SetActive(true);
+            gameObject.GetComponent<Animator>().SetBool("Skill",  Input.GetKey(KeyCode.F));
+            
             //body.linearVelocity = new Vector2(movement.x * chargeSpeed, body.linearVelocity.y);
-            body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
-            isCharging = true;
+            if(isCharging == true)
+            {
+                body.AddForce(new Vector2((facing * chargeSpeed * 10), body.linearVelocity.y));
+            }
+            
 
         }
         else
@@ -121,13 +124,13 @@ public class AirController : MonoBehaviour
 
         }
         if (isPlantGuy && Time.time > growingTime && Input.GetKey(KeyCode.F))
-        {gameObject.GetComponent<Animator>().SetBool("Skill", true);
+        {
             Debug.Log("Growplant");
             growingTime = Time.time + growingAmount;
             gameObject.GetComponent<Animator>().SetBool("Skill", true);
             //Growplant();
             
-            gameObject.GetComponent<Animator>().SetBool("Skill", true);
+            
         }
         else
         {
