@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5798845210953673755}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.532, y: 0.306, z: 0}
+  m_LocalPosition: {x: 0.532, y: 0.44, z: 0}
   m_LocalScale: {x: 0.38, y: 1.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 939598483209547705}
   m_Layer: 0
   m_Name: basicPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2119631465, guid: 5f367629ae5a10440a0e7e37feafeeff, type: 3}
+  m_Sprite: {fileID: -6404398491186825499, guid: fa0cde4fc9e66644b8fd263185c97a4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,8 +244,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.043220997, y: 0.08183372}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: -0.03508514, y: 0.006195754}
+  m_Size: {x: 0.78740895, y: 0.78740895}
   m_Direction: 0
 --- !u!95 &2841948238311360204
 Animator:
@@ -257,7 +257,7 @@ Animator:
   m_GameObject: {fileID: 7957890502607557238}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31eaa1a9397dbb947a191d9522bd252d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 27a86ba870abe8f488a2917fdc0fa490, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   jumpAmount: 0
   chargeCheck: {fileID: 5798845210953673755}
   isCharging: 0
-  growablePrefab: {fileID: 1739118090505702840, guid: 8228380cc84d7404e880e7f563134ea5, type: 3}
+  growablePrefab: {fileID: 4197374315348356572, guid: 1312f1ac102c4cd449a806bea4ba9bca, type: 3}
   growingAmount: 1
   growingTime: 0
   isAirGuy: 0
