@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Life : MonoBehaviour
 {
     public Character character;
+    public DeathMenu deathMenu;
     //use this on the next life
 
     [Header("UI Images")]
@@ -41,6 +42,8 @@ public class Life : MonoBehaviour
 
         void Die() //die after characters lives are up
         {
+            deathMenu.ShowDeathMenu();
+            gameObject.SetActive(false);
             Debug.Log("Player has died.");
             //SceneManager.LoadScene("Dead");  //the dead scene or main menu etc
         }

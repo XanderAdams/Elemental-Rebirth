@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     public AirController airController;   
     public Transform respawnLocation;
     public GameObject playerObject;
+    public DeathMenu deathPanel;
 
     private int currentIndex = 0;
     private Character[] characterOrder = { Character.Plant, Character.Stone, Character.Air };  
@@ -36,7 +38,8 @@ public class CharacterManager : MonoBehaviour
         else
         {
             Debug.Log("All characters dead. Game Over.");
-            GameOver();
+            //playerObject.SetActive(false);
+            deathPanel.ShowDeathMenu();
         }
     }
 
@@ -47,7 +50,7 @@ public class CharacterManager : MonoBehaviour
             livesUI.LoseLife();
     }
 
-    private void GameOver()
+    private void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
