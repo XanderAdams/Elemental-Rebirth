@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      YouLose_Rebirth_0: 8100554905044901785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
