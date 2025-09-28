@@ -3,21 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class CharacterManager : MonoBehaviour
 {
-    [Header("Characters")]
     public GameObject[] characters;
-
-    [Header("UI")]
     public LivesUI livesUI;
 
     private int currentIndex = 0;
 
     private void Start()
     {
-        // Activate first, disable others
         for (int i = 0; i < characters.Length; i++)
-        {
             characters[i].SetActive(i == 0);
-        }
 
         UpdateUI();
     }
@@ -26,6 +20,8 @@ public class CharacterManager : MonoBehaviour
     {
         characters[currentIndex].SetActive(false);
         currentIndex++;
+
+        livesUI.LoseLife(); // UI updates in order
 
         if (currentIndex < characters.Length)
         {
@@ -36,19 +32,21 @@ public class CharacterManager : MonoBehaviour
             Debug.Log("All characters dead. Game Over.");
             GameOver();
         }
-
-        UpdateUI();
     }
 
     private void UpdateUI()
     {
         int livesRemaining = characters.Length - currentIndex;
-        livesUI.SetLives(livesRemaining);
+        // just to sync UI at start
+        while (livesUI.GetLives() > livesRemaining)
+            livesUI.LoseLife();
     }
 
     private void GameOver()
     {
-        // Reload for now
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene
+        (
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
     }
 }

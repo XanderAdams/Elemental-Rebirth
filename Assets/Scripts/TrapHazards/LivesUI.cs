@@ -5,25 +5,54 @@ using TMPro;
 public class LivesUI : MonoBehaviour
 {
     [Header("UI References")]
-    public Image[] lifeIcons;          
-    public TextMeshProUGUI livesText; 
+    [Tooltip("Life slots (each should have a Life script).")]
+    public Life[] lifeSlots;         // each slot = one icon with a Life script
+    public TextMeshProUGUI livesText;
 
     private int currentLives;
 
-    public void SetLives(int lives)
+    private void Start()
     {
-        currentLives = lives;
+        currentLives = lifeSlots.Length;
+        UpdateUI();
+    }
 
-        
-        for (int i = 0; i < lifeIcons.Length; i++)
+    public void LoseLife()
+    {
+        if (currentLives > 0)
         {
-            lifeIcons[i].enabled = i < currentLives;
+            currentLives--;
+            UpdateUI();
+        }
+    }
+
+    public void GainLife()
+    {
+        if (currentLives < lifeSlots.Length)
+        {
+            currentLives++;
+            UpdateUI();
+        }
+    }
+
+    private void UpdateUI() //calls from life script
+    {
+        for (int i = 0; i < lifeSlots.Length; i++)
+        {
+            // only show active lives
+            lifeSlots[i].gameObject.SetActive(i < currentLives);
+
+            // also refresh the icon type
+            if (i < currentLives)
+                lifeSlots[i].UpdateLifeIcon();
         }
 
-        
         if (livesText != null)
-        {
             livesText.text = "Lives: " + currentLives;
-        }
+    }
+
+    public int GetLives()
+    {
+        return currentLives;
     }
 }
