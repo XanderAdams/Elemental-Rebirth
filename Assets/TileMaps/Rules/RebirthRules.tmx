@@ -79,10 +79,10 @@
 </data>
  </layer>
  <objectgroup id="7" name="output_destructable">
-  <object id="1" gid="2" x="320" y="128" width="64" height="64"/>
+  <object id="1" type="destructable" gid="2" x="320" y="128" width="64" height="64"/>
   <object id="2" gid="19" x="448" y="128" width="64" height="64"/>
   <object id="3" gid="9" x="704" y="128" width="64" height="64"/>
-  <object id="4" gid="2" x="1152" y="128" width="64" height="64"/>
+  <object id="4" type="destructable" gid="2" x="1152" y="128" width="64" height="64"/>
  </objectgroup>
  <layer id="5" name="output_thorns" width="30" height="20" visible="0">
   <data encoding="csv">

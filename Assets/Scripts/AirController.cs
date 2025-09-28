@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AirController : MonoBehaviour
@@ -28,6 +29,7 @@ public class AirController : MonoBehaviour
     public RuntimeAnimatorController PlantAnimator;
     public RuntimeAnimatorController StoneAnimator;
     public RuntimeAnimatorController AirAnimator;
+    public List<GameObject> plats = new List<GameObject> { };
 
     private void Awake()
     {
@@ -167,7 +169,12 @@ public class AirController : MonoBehaviour
     public void Growplant()
     {
 
-        Instantiate(growablePrefab, transform.position + growableSpawn, transform.rotation);
+        plats.Add(Instantiate(growablePrefab, transform.position + growableSpawn, transform.rotation));
+        if (plats.Count > 2)
+        {
+            Destroy(plats[0]);
+            plats.RemoveAt(0);
+        }
         gameObject.GetComponent<Animator>().SetBool("Skill", false);
     }
 
