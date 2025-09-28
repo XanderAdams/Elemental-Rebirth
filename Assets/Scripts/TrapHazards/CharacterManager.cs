@@ -3,29 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class CharacterManager : MonoBehaviour
 {
-    public GameObject[] characters;
     public LivesUI livesUI;
+    public AirController airController;   
+    public Transform respawnLocation;
+    public GameObject playerObject;
 
     private int currentIndex = 0;
-
+    private Character[] characterOrder = { Character.Plant, Character.Stone, Character.Air };  
     private void Start()
     {
-        for (int i = 0; i < characters.Length; i++)
-            characters[i].SetActive(i == 0);
-
+        // removed extra here
+        airController.SetCharacter(characterOrder[0]);
         UpdateUI();
     }
 
     public void OnCharacterDeath()
     {
-        characters[currentIndex].SetActive(false);
         currentIndex++;
+        livesUI.LoseLife();
 
-        livesUI.LoseLife(); // UI updates in order
-
-        if (currentIndex < characters.Length)
+        if (currentIndex < characterOrder.Length)
         {
-            characters[currentIndex].SetActive(true);
+            // move player to respawn
+            if (respawnLocation != null)
+                airController.transform.position = respawnLocation.position;
+
+            // should switch the players form without multiple gameobjects being needed
+            airController.SetCharacter(characterOrder[currentIndex]);
+
+            Debug.Log($"Respawned as {characterOrder[currentIndex]} at {respawnLocation.position}"); //the creature at which you switch to regarding the order above
         }
         else
         {
@@ -36,17 +42,13 @@ public class CharacterManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        int livesRemaining = characters.Length - currentIndex;
-        // just to sync UI at start
+        int livesRemaining = characterOrder.Length - currentIndex;
         while (livesUI.GetLives() > livesRemaining)
             livesUI.LoseLife();
     }
 
     private void GameOver()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene
-        (
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
